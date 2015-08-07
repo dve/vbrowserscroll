@@ -17,6 +17,12 @@
 		<url>www.vegetweb.de</url>
 	</organization>
 
+	<scm>
+		<url>git://github.com/dve/vbrowserscroll</url>
+		<connection>scm:git:git://github.com/dve/vbrowserscroll.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:dve/vbrowserscroll.git</developerConnection>
+		<tag>addon-test-helpers</tag>
+	</scm>
 	<licenses>
 		<license>
 			<name>Apache 2</name>
@@ -220,7 +226,7 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- Needed to run the demos and tests -->
 		<dependency>
 			<groupId>com.vaadin</groupId>
