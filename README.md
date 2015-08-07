@@ -1,0 +1,1 @@
+# vBrowserScroll - a Vaadin addon for browser scroll events
