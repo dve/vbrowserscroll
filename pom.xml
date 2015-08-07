@@ -56,16 +56,8 @@
 						<manifestEntries>
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
-
-							<!-- Comma-separated list of widgetsets in the package -->
-							<!-- TODO figure out a way make this automatically configured -->
-							<Vaadin-Widgetsets>org.vaadin.addon.leaflet.draw.DrawWidgetset</Vaadin-Widgetsets>
 						</manifestEntries>
 					</archive>
-					<excludes>
-						<!-- Remove resources included due to gwt compilation -->
-						<exclude>**/demoandtestapp/*</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -118,22 +110,6 @@
 				</executions>
 			</plugin>
 		</plugins>
-
-		<resources>
-			<resource>
-				<!-- This add sources, .gwt.xml files etc to jar from source directory. 
-					Not quite maven convention byt easieast to setup this way. -->
-				<directory>src/main/java</directory>
-			</resource>
-			<!-- This is here to simplify working with GWT plugin during test widgetset 
-				compilation. Test widgetset is this way more like a real world usage and 
-				also lets your test up to e.g. use other add-ons. Ensure these are excluded 
-				from the artifact ( jar file ). -->
-			<resource>
-				<directory>src/test/resources</directory>
-			</resource>
-		</resources>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>
