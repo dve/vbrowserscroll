@@ -20,7 +20,7 @@
 	<scm>
 		<url>git://github.com/dve/vbrowserscroll</url>
 		<connection>scm:git:git://github.com/dve/vbrowserscroll.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:dve/vbrowserscroll.git</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com:/dve/vbrowserscroll.git</developerConnection>
 		<tag>addon-test-helpers</tag>
 	</scm>
 	<licenses>
