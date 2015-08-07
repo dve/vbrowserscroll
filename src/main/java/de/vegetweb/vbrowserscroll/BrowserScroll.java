@@ -4,12 +4,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
+import com.google.gwt.json.client.JSONArray;
+import com.google.gwt.json.client.JSONException;
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
+
+import elemental.json.JsonArray;
 
 @JavaScript({ "browserscroll.js", "browserscroll-connector.js", "jquery-1.11.3.min.js" })
 public class BrowserScroll extends AbstractJavaScriptComponent {
@@ -22,14 +23,15 @@ public class BrowserScroll extends AbstractJavaScriptComponent {
 	public BrowserScroll() {
 		addFunction("onTop", new JavaScriptFunction() {
 			@Override
-			public void call(JSONArray arguments) throws JSONException {
+			public void call(JsonArray arguments) {
 				updateState(arguments);
 				fireEvent(BrowserScrollEvent.top(getState().pos));
 			}
 		});
+
 		addFunction("notOnTop", new JavaScriptFunction() {
 			@Override
-			public void call(JSONArray arguments) throws JSONException {
+			public void call(JsonArray arguments) {
 				updateState(arguments);
 				fireEvent(BrowserScrollEvent.notTop(getState().pos));
 			}
@@ -56,7 +58,7 @@ public class BrowserScroll extends AbstractJavaScriptComponent {
 		return (BrowserScrollState) super.getState();
 	}
 
-	private void updateState(JSONArray arguments) throws JSONException {
-		getState().pos = arguments.getInt(0);
+	private void updateState(JsonArray arguments) throws JSONException {
+		getState().pos = (int) arguments.getNumber(0);
 	}
 }
