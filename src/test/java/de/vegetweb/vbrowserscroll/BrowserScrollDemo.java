@@ -32,7 +32,7 @@ public class BrowserScrollDemo extends AbstractTest {
                         try {
                             int topThreshold = Integer
                                     .valueOf(topThresholdTextField.getValue());
-                            browserScroll.setTopThreshodl(topThreshold);
+                            browserScroll.setTopThreshold(topThreshold);
                         } catch (NumberFormatException e) {
 
                         }

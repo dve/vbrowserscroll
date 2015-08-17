@@ -67,7 +67,7 @@ public class BrowserScroll extends AbstractJavaScriptComponent {
         return getState().topThreshold;
     }
 
-    public void setTopThreshodl(int topThreshold) {
+    public void setTopThreshold(int topThreshold) {
         getState().topThreshold = topThreshold;
     }
 }
