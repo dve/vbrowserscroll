@@ -10,11 +10,11 @@ import com.vaadin.annotations.JavaScript;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
 
+import de.vegetweb.AbstractJQueryComponent;
 import elemental.json.JsonArray;
 
-@JavaScript({ "browserscroll.js", "browserscroll-connector.js",
-        "jquery-1.11.3.min.js" })
-public class BrowserScroll extends AbstractJavaScriptComponent {
+@JavaScript({ "browserscroll.js", "browserscroll-connector.js" })
+public class BrowserScroll extends AbstractJQueryComponent {
     public interface BrowserScrollListener extends Serializable {
         public void browserScrolled(BrowserScrollEvent event);
     }
