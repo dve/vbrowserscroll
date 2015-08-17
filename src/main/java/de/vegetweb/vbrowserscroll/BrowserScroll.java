@@ -62,4 +62,12 @@ public class BrowserScroll extends AbstractJavaScriptComponent {
     private void updateState(JsonArray arguments) throws JSONException {
         getState().pos = (int) arguments.getNumber(0);
     }
+
+    public int getTopThreshold() {
+        return getState().topThreshold;
+    }
+
+    public void setTopThreshodl(int topThreshold) {
+        getState().topThreshold = topThreshold;
+    }
 }
